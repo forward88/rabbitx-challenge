@@ -29,7 +29,8 @@ export const Orderbook = () => {
 
   return (
     <div className="bg-cyan-950 p-4 min-h-96 w-80">
-      {bids.map((bid, index) => {
+      <div className="font-bold text-3xl text-white">Bids</div>
+      {bids.slice(0, 11).map((bid, index) => {
         return (
           <div key={index} className="flex justify-between">
             <span className="text-white">{bid[0]}</span>
@@ -37,7 +38,8 @@ export const Orderbook = () => {
           </div>
         );
       })}
-      {asks.map((ask, index) => {
+      <div className="font-bold text-3xl text-white">Asks</div>
+      {asks.slice(0, 11).map((ask, index) => {
         return (
           <div key={index} className="flex justify-between">
             <span className="text-white">{ask[0]}</span>
